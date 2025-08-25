@@ -1,10 +1,17 @@
 import {View, Text, StyleSheet} from "react-native"
+import { Image } from "expo-image"
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 export default function Header() {
   return (
     <View style={styles.header}>
-        <Text style={styles.logo}>Logo</Text>
-        <View style={styles.menu}></View>
+      <Image
+        style={styles.logo}
+        source={require('../../assets/img/logo2.png')}
+      />
+        <View>
+          <FontAwesome6 name="bars" size={24} color="#fff" />
+        </View>
     </View>
   )
 }
@@ -20,13 +27,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   logo: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#ffbb00ff'
-  },
-  menu: {
-    width: 40,
-    height: 40,
-    backgroundColor: "#e05050ff"
+    width: 75,
+    height: 75
   }
 })
