@@ -12,3 +12,10 @@
 -npx expo install @expo/vector-icons
 
 -existe o componente "image" no react-native, mas ele é mais limitado se for comparadoo com o Expo
+
+# Quais os tipos de navegação posso utilizar com Expo Router
+
+- stack/pilha = colocar uma página em cima da outra em camadas
+- tabs = 
+- drawer = 
+- modal = é uma janela que abre na frente

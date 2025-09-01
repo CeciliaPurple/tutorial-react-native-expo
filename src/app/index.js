@@ -1,14 +1,19 @@
 import { View, Text, StyleSheet } from "react-native"
-import Header from "./src/components/Header"
-import Card from "./src/components/Card"
-import Footer from "./src/components/Footer"
-import Button from "./src/components/Button"
+import Header from "../components/Header"
+import Card from "../components/Card"
+import Footer from "../components/Footer"
+import Button from "../components/Button"
+import { Link } from "expo-router"
 
-export default function App() {
+export default function Home() {
   return (
     <View style={styles.container}>
       <Header/>
-
+      <View style={styles.nav}>
+        <Link href={'contact'} style={styles.button}><Text>Contato</Text></Link>
+        <Link href={'about'} style={styles.button}><Text>Sobre</Text></Link>
+        <Link href={'profile'} style={styles.button}><Text>Perfil</Text></Link>
+      </View>
       <View style={styles.content}>
         <Card 
         title="Barbie e o Castelo de Diamante" 
@@ -35,6 +40,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#3df146ff',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  nav: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 20,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#95a9ffff',
+    width: '100%'
+  },
+  button: {
+    backgroundColor: '#f4f3f0ff',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 10,
   },
   content: {
     flex: 7,
